@@ -20,11 +20,11 @@ public:
 
         //@brief                get available user buffer size
         //@return               available user buffer size
-        int UserBufferLen() { return AVAILABLE_BUFFER_SIZE - PROTOCOL_HEADER_LEN; }
+        int UserBufferLen() const { return AVAILABLE_BUFFER_SIZE - PROTOCOL_HEADER_LEN; }
 
         //@brief                get user data len
         //@return               user data len
-        int UserDataLen() { return len - PROTOCOL_HEADER_LEN; }
+        int UserDataLen() const { return len - PROTOCOL_HEADER_LEN; }
 
         //@brief                set user data len
         //@param    v   [IN]    user data len
@@ -36,15 +36,15 @@ public:
 
         //@brief                get protocol data len
         //@return               protocol data len
-        int ProtocolDataLen() { return len; }
+        int ProtocolDataLen() const { return len; }
         void ProtocolDataLen(int v) { len = v; }
 
-        int ProtocolBufferLen() { return AVAILABLE_BUFFER_SIZE; }
+        int ProtocolBufferLen() const { return AVAILABLE_BUFFER_SIZE; }
 
         //@brief                get packet id
         //@return               packet id
         uint32_t PacketId() { return *((uint32_t*)buffer); }
-        void PacketId(uint32_t v) { *((uint32_t*)buffer) = v; }
+        void PacketId(uint32_t v) const { *((uint32_t*)buffer) = v; }
 private:
         //protocol data len
         int len;
