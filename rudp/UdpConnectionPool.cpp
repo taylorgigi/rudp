@@ -64,3 +64,9 @@ void UdpConnectionPool::Start()
         }
 }
 
+void UdpConnectionPool::Stop()
+{
+    for(auto& t : io_thread_pool) {
+        t->join();
+    }
+}

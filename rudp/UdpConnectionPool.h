@@ -24,6 +24,7 @@ public:
         void Unregister(const udp::endpoint& local_endpoint, const udp::endpoint& peer_endpoint);
         void AsyncSend(const udp::endpoint& local_endpoint, const udp::endpoint& peer_endpoint, const std::shared_ptr<ProtocolBuffer>& data);
         void Start();
+        void Stop();
 private:
         boost::asio::io_context io_context;
         std::vector<std::unique_ptr<boost::thread>> io_thread_pool;

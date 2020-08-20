@@ -1,5 +1,5 @@
 #include <iostream>
-#include "UdpEndpointHasher.h"
+#include "../UdpEndpointHasher.h"
 
 int main()
 {

@@ -12,8 +12,8 @@ extern std::shared_ptr<spdlog::logger> logger;
 //@param    logger_name     name of the logger which will be created
 //@param    dir             directory name, which should be a name, neither absolute path nor relative path
 //@param    log_name        file name of log file
-//@return                   0:succeed -1:failed
-int logger_init(const char *logger_name, const char *dir_name, const char *log_name);
+//@return                   true:succeed false:failed
+bool logger_init(const char *logger_name, const char *dir_name, const char *log_name);
 
 #endif
 

@@ -2,9 +2,9 @@
 #include <iostream>
 #include <boost/thread.hpp>
 #include <boost/chrono.hpp>
-#include "UdpConnectionPool.h"
-#include "ProtocolBuffer.h"
-#include "logger.h"
+#include "../UdpConnectionPool.h"
+#include "../ProtocolBuffer.h"
+#include "../logger.h"
 
 std::shared_ptr<UdpConnectionPool> conn_pool = UdpConnectionPool::Create();
 
